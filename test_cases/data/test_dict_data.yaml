@@ -1,0 +1,13 @@
+get_dict_by_type:
+  - name: "获取性别字典"
+    dict_type: "gender"
+    expected_code: 0
+    expected_msg: "成功"
+  - name: "获取订单状态字典"
+    dict_type: "order_status"
+    expected_code: 0
+    expected_msg: "成功"
+  - name: "获取一个不存在的字典类型"
+    dict_type: "non_exist_type"
+    expected_code: 500  # 假设后端会返回一个业务错误码
+    expected_msg: "字典类型不存在"
